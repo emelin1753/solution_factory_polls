@@ -1,0 +1,11 @@
+<h1>Results {{ user }}</h1>
+
+{% if result_votes %}
+    <ul>
+    {% for result in result_votes %}
+        <li>Question: {{ result.question }} vote: {{ result.votes_text }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No results are available.</p>
+{% endif %}
